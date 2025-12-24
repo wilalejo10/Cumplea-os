@@ -1,191 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🎉 ¡Feliz Cumpleaños Especial! 🎂</title>
-    <button
-      class="music-btn"
-      onclick="document.getElementById('bg-music').play()"
-    >
-      🎵 Reproducir Música
-    </button>
+    <title>🎉 ¡Feliz Cumpleaños!🎂</title>
 
     <style>
-      body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        color: #333;
-        overflow-x: hidden;
-      }
-
-      header {
-        text-align: center;
-        padding: 50px 20px 20px;
-      }
-
-      header h1 {
-        font-size: 3em;
-        color: #ff4081;
-      }
-
-      header p {
-        font-size: 1.3em;
-      }
-
-      .message {
-        max-width: 800px;
-        margin: 50px auto;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        line-height: 1.8;
-      }
-
-      .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        padding: 40px;
-        background: rgba(255, 255, 255, 0.6);
-      }
-
-      .gallery img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .gallery img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
-      }
-
-      footer {
-        text-align: center;
-        padding: 20px;
-        background: #ffb6c1;
-        color: #333;
-        font-weight: bold;
-      }
-
-      .balloons {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        overflow: hidden;
-        z-index: -1;
-      }
-
-      .balloon {
-        position: absolute;
-        bottom: -150px;
-        width: 60px;
-        height: 80px;
-        border-radius: 50%;
-        animation: floatUp 8s linear infinite;
-      }
-
-      @keyframes floatUp {
-        0% {
-          transform: translateY(0) rotate(0deg);
-          opacity: 1;
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+            overflow-x: hidden;
         }
-        100% {
-          transform: translateY(-110vh) rotate(360deg);
-          opacity: 0;
+
+        header {
+            text-align: center;
+            padding: 50px 20px 20px;
         }
-      }
-      .music-btn {
-        display: inline-block;
-        padding: 12px 25px;
-        margin-top: 20px;
-        background: #ff4081;
-        color: white;
-        border: none;
-        border-radius: 50px;
-        font-size: 1.1em;
-        cursor: pointer;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
 
-      .music-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-      }
+        header h1 {
+            font-size: 3em;
+            color: #ff4081;
+        }
 
-      .music-btn:active {
-        transform: scale(0.98);
-      }
+        header p {
+            font-size: 1.3em;
+        }
+
+        .music-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .message {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .gallery img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffb6c1;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .balloons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 60px;
+            height: 80px;
+            border-radius: 50%;
+            animation: floatUp 8s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        }
+
+        .music-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px 5px;
+            background: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.05);
+            background: #e91e63;
+        }
+        
+        .highlight-text {
+            color: #d81b60;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="balloons">
-      <div
-        class="balloon"
-        style="left: 5%; background: #ff6f61; animation-delay: 0s"
-      ></div>
-      <div
-        class="balloon"
-        style="left: 25%; background: #81c784; animation-delay: 2s"
-      ></div>
-      <div
-        class="balloon"
-        style="left: 45%; background: #64b5f6; animation-delay: 4s"
-      ></div>
-      <div
-        class="balloon"
-        style="left: 65%; background: #ffd54f; animation-delay: 1s"
-      ></div>
-      <div
-        class="balloon"
-        style="left: 85%; background: #ba68c8; animation-delay: 3s"
-      ></div>
+        <div class="balloon" style="left: 5%; background: #ff6f61; animation-delay: 0s"></div>
+        <div class="balloon" style="left: 25%; background: #81c784; animation-delay: 2s"></div>
+        <div class="balloon" style="left: 45%; background: #64b5f6; animation-delay: 4s"></div>
+        <div class="balloon" style="left: 65%; background: #ffd54f; animation-delay: 1s"></div>
+        <div class="balloon" style="left: 85%; background: #ba68c8; animation-delay: 3s"></div>
     </div>
 
     <header>
-      <h1>🎂 ¡Feliz Cumpleaños, mi Val 🎉</h1>
-      <p>Aunque la distancia nos separe, siempre estaré contigo 💕</p>
+        <h1>🎂 ¡Feliz Cumpleaños, mi Val 🎉</h1>
+        <p>Aunque la distancia nos separe, siempre estaré contigo 💕</p>
+        
+        <div class="music-container">
+            <button class="music-btn" onclick="playSong('song1')">🎵 Next to You</button>
+            <button class="music-btn" onclick="playSong('song2')">🎵 Chachachá</button>
+            <button class="music-btn" onclick="playSong('song3')">🎵 TAKE ON ME</button>
+            <button class="music-btn" style="background: #555;" onclick="stopAll()">⏸ Pausar</button>
+        </div>
     </header>
 
     <section class="message">
-      <p>
-        Hoy es un día muy especial, porque celebramos tu vida, tu sonrisa y todo
-        lo bonito que traes al mundo.<br />
-        Aunque no pueda abrazarte en persona, quiero que sepas que te pienso en
-        cada momento.<br />
-        La distancia no borra los recuerdos, solo los hace más valiosos.
-      </p>
-      <p>
-        Espero que este día esté lleno de amor, risas y sueños cumplidos.<br />
-        ¡Feliz cumpleaños, con todo mi cariño y mis mejores deseos, estés donde
-        estés! 💫
-      </p>
+
+      <h1> Esta pagina tambien esta diseñana para que la veas cada vez lo que necesites, sientas que no puedes, cuando no pueda estar paro ti, esta pagina siempre estara para ti.</h1>
+        <p>
+            Hoy es un día muy especial, porque celebramos tu vida, tu sonrisa y todo
+            lo bonito que traes al mundo.<br />
+            Aunque no pueda abrazarte en persona, quiero que sepas que te pienso en
+            cada momento.
+        </p>
+        
+        <p class="highlight-text">
+            🌟 "Eres una persona increíble y brillas con luz propia."
+        </p>
+        
+        <p>
+            Me encanta ver cómo cumples tus metas y cómo te enfrentas a cada reto con valentía. 
+            Eres una inspiración para mí y para todos los que te rodean.
+        </p>
+
+        <p class="highlight-text">
+            ✨ "No importa los kilómetros, el cariño no sabe de mapas."
+        </p>
+
+        <p>
+            Espero que este día esté lleno de amor, risas y sueños cumplidos.<br />
+            ¡Feliz cumpleaños, con todo mi cariño y mis mejores deseos, estés donde
+            estés! 💫
+        </p>
+
+        <p>
+          Quiero tenderte la mano, acercarme a tu tristeza, y ayudar a tu corazón, a veces sentirás que no perteneces a ningún lugar, que nadie te quiere o te acepta como eres, pero tuviste la fuerza y aun tienes la fuerza de internarlo una vez mas y lograr ser mejor, se una mejor versión de ti misma.
+        </p>
+
+        <p>
+          A pesar de todo lo que paso hay una parte de mi que cada oportunidad que tengo para ayudarte, escucharte, hacerte reir no lo pienso, solo lo hago. Todo en mi vida es inestable y problemático, pero tú eres la única persona con la que puedo contar sin importar el problema.
+        </p>
+        <p>
+          (\_/)<br />
+          ( •.•)<br />
+          />❤️
+        </p>
     </section>
 
     <section class="gallery">
-      <img src="Snoopy.png" alt="Foto 1" />
-      <img src="Spike.png" alt="Foto 2" />
-      <img src="we.png" alt="Foto 3" />
-      <img src="smile.png" alt="Foto 4" />
+        <img src="Snoopy.png" alt="Foto 1" />
+        <img src="Spike.png" alt="Foto 2" />
+        <img src="we.png" alt="Foto 3" />
+        <img src="smile.png" alt="Foto 4" />
+        <img src="Val.png" alt="Foto 5" />
+        <img src="We_2.png" alt="Foto 6" />
+        <img src="boku.png" alt="Foto 7" />
     </section>
 
-    <footer>❤ Con todo el corazón, pensando en ti desde la distancia, no olvies sonreir sin importar los problemas, estoy orgulloso de la gran mujer que eres. TE QUIERO MUCHO!!! ❤</footer>
+    <footer>❤ Con todo el corazón, pensando en ti desde la distancia, no olvides sonreír sin importar los problemas, estoy orgulloso de la gran mujer que eres. TE QUIERO MUCHO!!! ❤</footer>
 
-    <audio id="bg-music" loop>
-      <source src="next to you.mp3" type="audio/mpeg" />
+    <audio id="song1" loop>
+        <source src="next to you.mp3" type="audio/mpeg" />
     </audio>
-  </body>
+    <audio id="song2" loop>
+        <source src="Chachachá.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="song3" loop>
+        <source src="TAKE ON ME.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script>
+        function playSong(songId) {
+            stopAll();
+            const selectedSong = document.getElementById(songId);
+            if (selectedSong) {
+                selectedSong.play();
+            }
+        }
+
+        function stopAll() {
+            const songs = ['song1', 'song2', 'song3'];
+            songs.forEach(id => {
+                const song = document.getElementById(id);
+                if (song) {
+                    song.pause();
+                    song.currentTime = 0;
+                }
+            });
+        }
+    </script>
+</body>
 </html>
