@@ -169,7 +169,14 @@
             <p class="highlight-text">🌟 "Eres una persona increíble y brillas con luz propia."</p>
             <p>Me encanta ver cómo cumples tus metas y cómo te enfrentas a cada reto con valentía.</p>
             <p class="highlight-text">✨ "No importa los kilómetros, el cariño no sabe de mapas."</p>
-            <p>A pesar de todo lo que pasó hay una parte de mi que cada oportunidad que tengo para ayudarte, escucharte, hacerte reír no lo pienso, solo lo hago.</p>
+            <p>😘A pesar de todo lo que pasó hay una parte de mi que cada oportunidad que tengo para ayudarte, escucharte, hacerte reír no lo pienso,
+                solo lo hago.😘</p>
+            <p>❤Entraste a mi vida y era como un trago de cafe por la mañanas, eres como estar bañado por la luz del sol, eres increíblemente, 
+                enérgica, entusiasta y tienes este sentido de juego y diversión, lo cual es increíble, hermoso y emocionante.❤</p>
+            <p>🤩Mientras se mantenga la esperanza, las promesas no morirán, cuando decides mantener un sueño vivo no importa cuánto suceda aún 
+                si te quedas sin lágrimas debes seguir adelante.🤩</p>
+            <p>🌹Quiero recordarte lo especial que eres. Tu sonrisa ilumina los días, tu ternura abraza mi corazón y tu presencia hace que todo 
+                tenga más sentido, gracias por existir y por hacer la vida más hermosa y llevadera.🌹</p>
             <p> (\_/)<br /> ( •.•)<br /> />❤️</p>
         </div>
     </section>
@@ -185,6 +192,13 @@
             <img src="boku.png" alt="Foto 7" />
             <img src="Josefa.png" alt="Foto 8" />
             <img src="Josefa_1.png" alt="Foto 9" />
+            <img src="Spike_1.png" alt="Foto 10" />
+            <img src="Spike_2.png" alt="Foto 11" />
+            <img src="Spike_3.png" alt="Foto 12" />
+            <img src="Spike_4.png" alt="Foto 13" />
+            <img src="Val_2.png" alt="Foto 14" />
+            <img src="Val_3.png" alt="Foto 15" />
+            <img src="Val_4.png" alt="Foto 16" />
         </div>
     </section>
 
@@ -194,22 +208,38 @@
             <button class="music-btn" onclick="playSong('song1')">🎵 Next to You</button>
             <button class="music-btn" onclick="playSong('song2')">🎵 Chachachá</button>
             <button class="music-btn" onclick="playSong('song3')">🎵 TAKE ON ME</button>
-            <button class="music-btn" onclick="playSong('song5')">🎵 Alguien como tú</button>
-            <button class="music-btn" onclick="playSong('song6')">🎵 This is what falling in love like</button>
-            <button class="music-btn" onclick="playSong('song7')">🎵 Make You Mine</button>
+            <button class="music-btn" onclick="playSong('song4')">🎵 Alguien como tú</button>
+            <button class="music-btn" onclick="playSong('song5')">🎵 This is what falling in love like</button>
+            <button class="music-btn" onclick="playSong('song6')">🎵 Make You Mine</button>
+            <button class="music-btn" onclick="playSong('song7')">🎵 When I'm Gone</button>
+            <button class="music-btn" onclick="playSong('song8')">🎵 Here Without You</button>
+            <button class="music-btn" onclick="playSong('song9')">🎵 Paradise</button>
+            <button class="music-btn" onclick="playSong('song10')">🎵 Masterpiece</button>
+            <button class="music-btn" onclick="playSong('song11')">🎵 Universe</button>
+
             <br><br>
             <button class="music-btn" style="background: #555;" onclick="stopAll()">⏸ Pausar Música</button>
         </div>
     </section>
 
-    <footer>❤ Con todo el corazón, pensando en ti desde la distancia. TE QUIERO MUCHO!!! ❤</footer>
+    <footer>
+        ❤ Con todo el corazón, pensando en ti desde la distancia. TE QUIERO MUCHO!!! ❤<br />
+        Te amo, hasta el final de mis dias, hasta el infinito y mas allá.<br />
+        No lo olvides, somos tu y yo contra el mundo.<br />
+        MUAAAAAAAA!💋
+    </footer>
 
     <audio id="song1" loop><source src="next to you.mp3" type="audio/mpeg" /></audio>
     <audio id="song2" loop><source src="Chachachá.mp3" type="audio/mpeg" /></audio>
     <audio id="song3" loop><source src="TAKE ON ME.mp3" type="audio/mpeg" /></audio>
-    <audio id="song5" loop><source src="alguien_como_tu.mp3" type="audio/mpeg" /></audio>
-    <audio id="song6" loop><source src="love_like.mp3" type="audio/mpeg" /></audio>
-    <audio id="song7" loop><source src="Make You Mine.mp3" type="audio/mpeg" /></audio>
+    <audio id="song4" loop><source src="alguien_como_tu.mp3" type="audio/mpeg" /></audio>
+    <audio id="song5" loop><source src="love_like.mp3" type="audio/mpeg" /></audio>
+    <audio id="song6" loop><source src="Make You Mine.mp3" type="audio/mpeg" /></audio>
+    <audio id="song7" loop><source src="When_I'm_Gone.mp3" type="audio/mpeg" /></audio>
+    <audio id="song8" loop><source src="Here_Without_You.mp3" type="audio/mpeg" /></audio>
+    <audio id="song9" loop><source src="Paradise.mp3" type="audio/mpeg" /></audio>
+    <audio id="song10" loop><source src="Masterpiece.mp3" type="audio/mpeg" /></audio>
+    <audio id="song11" loop><source src="Universe.mp3" type="audio/mpeg" /></audio>
 
     <script>
         // Función para cambiar de pestañas
@@ -241,7 +271,7 @@
         }
 
         function stopAll() {
-            const songs = ['song1', 'song2', 'song3', 'song4', 'song5', 'song6', 'song7'];
+            const songs = ['song1', 'song2', 'song3', 'song4', 'song5', 'song6', 'song7', 'song8', 'song9', 'song10', 'song11'];
             songs.forEach(id => {
                 const song = document.getElementById(id);
                 if (song) {
